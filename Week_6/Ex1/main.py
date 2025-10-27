@@ -1,3 +1,4 @@
+# 20237451 - Nguyen Huu Kien
 from Circle import Circle
 
 def main():
@@ -15,4 +16,6 @@ def main():
         raise ve
     
 if __name__ == "__main__":
+    print("20237451 - Nguyen Huu Kien")
+    print("----------------------------")
     main()
