@@ -2,6 +2,7 @@ from typing import Callable, Any, Dict, List, Set
 import random
 
 class Event:
+    """A simple event system to manage subscribers and notify them."""
     def __init__(self):
         self._handlers: List[Callable[..., Any]] = []
     def subscribe(self, handler: Callable[..., Any]) -> None:
@@ -13,6 +14,7 @@ class Event:
             handler(*args, **kwargs)
 
 class Payroll:
+    """A simple payroll system to manage employee names."""
     def __init__(self):
         self._names: Set[str] = set()
     def contains(self, name: str) -> bool:
@@ -25,6 +27,7 @@ class Payroll:
         return set(self._names)
     
 class OrganizationMonitor:
+    """Monitors organization events related to hiring."""
     def __init__(self):
         self.on_new_hire = Event()
         self.on_conflict_and_error = Event()
